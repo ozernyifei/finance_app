@@ -68,8 +68,8 @@ class ExpensesList extends StatelessWidget {
             final expense = expenses[index];
             return ExpenseItem(
               expense: expense,
-              onDelete: () {
-                expenseProvider.deleteExpense(expense.id!);
+              onDelete: () async {
+                await expenseProvider.deleteExpense(expense.id!);
               },
             );
           },
@@ -78,4 +78,3 @@ class ExpensesList extends StatelessWidget {
     );
   }
 }
-
