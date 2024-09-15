@@ -1,0 +1,19 @@
+{
+    "login": "Вход",
+    "register": "Регистрация",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "expenses": "Расходы",
+    "statistics": "Статистика",
+    "subscriptions": "Подписки",
+    "add_expense": "Добавить расход",
+    "title": "Название",
+    "amount": "Сумма",
+    "category": "Категория",
+    "date": "Дата",
+    "select_date": "Выбрать дату",
+    "add": "Добавить",
+    "no_expenses": "Расходы не записаны.",
+    "authentication_failed": "Ошибка аутентификации"
+  }
+  

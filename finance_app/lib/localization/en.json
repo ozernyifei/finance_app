@@ -1,0 +1,19 @@
+{
+    "login": "Login",
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "expenses": "Expenses",
+    "statistics": "Statistics",
+    "subscriptions": "Subscriptions",
+    "add_expense": "Add Expense",
+    "title": "Title",
+    "amount": "Amount",
+    "category": "Category",
+    "date": "Date",
+    "select_date": "Select Date",
+    "add": "Add",
+    "no_expenses": "No expenses recorded.",
+    "authentication_failed": "Authentication Failed"
+  }
+  

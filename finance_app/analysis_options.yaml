@@ -1,0 +1,183 @@
+include: package:flutter_lints/flutter.yaml
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics:
+    number-of-parameters: 3
+    source-lines-of-code: 30
+    maximum-nesting-level: 5
+    cyclomatic-complexity: 10
+    halstead-volume: 300
+    maintainability-index: 50
+    number-of-methods: 10
+  metrics-exclude:
+    - test/**
+  rules: # https://dartcodemetrics.dev/docs/rules
+    - arguments-ordering:
+        child-last: true
+    - avoid-cascade-after-if-null: true
+    - avoid-collection-methods-with-unrelated-types: true
+    - avoid-double-slash-imports: true
+    - avoid-duplicate-exports: true
+    - avoid-dynamic: true
+    - avoid-global-state: true
+    - avoid-ignoring-return-values:
+        exclude:
+          - integration_test/**
+          - test/**
+    - avoid-missing-enum-constant-in-map: true
+    - avoid-nested-conditional-expressions:
+        acceptable-level: 2
+    - avoid-redundant-async: true
+    - avoid-top-level-members-in-tests: true
+    - avoid-unnecessary-type-assertions: true
+    - avoid-unnecessary-type-casts: true
+    - avoid-unrelated-type-assertions: true
+    - avoid-unused-parameters: true
+    - binary-expression-operand-order: true
+    - double-literal-format: true
+    - format-comment: true
+    - newline-before-return: true
+    - no-boolean-literal-compare: true
+    - no-empty-block: true
+    - no-equal-arguments:
+        ignored-parameters:
+          - width
+          - height
+    - no-equal-then-else: true
+    - no-magic-number: true
+    - no-object-declaration: true
+    - prefer-commenting-analyzer-ignores: true
+    - prefer-conditional-expressions: true
+    - prefer-correct-identifier-length:
+        exceptions: ['id']
+        min-identifier-length: 3
+        max-identifier-length: 30
+    - prefer-correct-test-file-name: true
+    - prefer-correct-type-name: true
+    - prefer-enums-by-name: true
+    - prefer-first: true
+    - prefer-immediate-return: true
+    - prefer-iterable-of: true
+    - prefer-last: true
+    - prefer-match-file-name: true
+    - prefer-moving-to-variable:
+        allowed-duplicated-chains: 2
+    - prefer-trailing-comma: true
+    # Flutter rules
+    - always-remove-listener: true
+    - avoid-expanded-as-spacer: true
+    - avoid-shrink-wrap-in-lists: true
+    - avoid-unnecessary-setstate: true
+    - avoid-wrapping-in-padding: true
+    - prefer-correct-edge-insets-constructor: true
+    - prefer-extracting-callbacks:
+        allowed-line-count: 5
+#        ignored-named-arguments:
+#          - onPressed
+    - prefer-single-widget-per-file:
+        ignore-private-widgets: true
+    - prefer-using-list-view: true
+
+analyzer:
+  plugins:
+    - dart_code_metrics
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+  errors:
+    parameter_assignments: error
+
+linter:
+  rules:
+    # Excluded rules from https://github.com/flutter/packages/blob/master/packages/flutter_lints/lib/flutter.yaml
+    use_key_in_widget_constructors: false
+    # Additional rules from https://dart-lang.github.io/linter/lints/
+    avoid_dynamic_calls: true
+    avoid_returning_null_for_future: true
+    avoid_type_to_string: true
+    cancel_subscriptions: true
+    close_sinks: true
+    discarded_futures: true
+    literal_only_boolean_expressions: true
+    no_adjacent_strings_in_list: true
+    test_types_in_equals: true
+    throw_in_finally: true
+    unnecessary_statements: true
+    unsafe_html: true
+    always_put_control_body_on_new_line: true
+    avoid_bool_literals_in_conditional_expressions: true
+    avoid_catches_without_on_clauses: true
+    avoid_catching_errors: true
+    avoid_double_and_int_checks: true
+    avoid_escaping_inner_quotes: true
+    avoid_field_initializers_in_const_classes: true
+    avoid_final_parameters: true
+    avoid_js_rounded_ints: true
+    avoid_multiple_declarations_per_line: true
+    avoid_positional_boolean_parameters: true
+    avoid_private_typedef_functions: true
+    avoid_redundant_argument_values: true
+    avoid_returning_this: true
+    avoid_setters_without_getters: true
+    avoid_types_on_closure_parameters: true
+    avoid_unused_constructor_parameters: true
+    avoid_void_async: true
+    cascade_invocations: true
+    cast_nullable_to_non_nullable: true
+    combinators_ordering: true
+    conditional_uri_does_not_exist: true
+    deprecated_consistency: true
+    directives_ordering: true
+    do_not_use_environment: true
+    eol_at_end_of_file: true
+    flutter_style_todos: true
+    join_return_with_assignment: true
+    leading_newlines_in_multiline_strings: true
+    missing_whitespace_between_adjacent_strings: true
+    no_default_cases: true
+    no_runtimeType_toString: true
+    noop_primitive_operations: true
+    omit_local_variable_types: true
+    one_member_abstracts: true
+    only_throw_errors: true
+    parameter_assignments: true
+    prefer_asserts_in_initializer_lists: true
+    prefer_asserts_with_message: true
+    prefer_constructors_over_static_methods: true
+    prefer_final_in_for_each: true
+    prefer_final_locals: true
+    prefer_foreach: true
+    prefer_if_elements_to_conditional_expressions: true
+    prefer_int_literals: true
+    prefer_mixin: true
+    prefer_null_aware_method_calls: true
+    prefer_single_quotes: true
+    sized_box_shrink_expand: true
+    sort_constructors_first: true
+    sort_unnamed_constructors_first: true
+    tighten_type_of_initializing_formals: true
+    unawaited_futures: true
+    unnecessary_await_in_return: true
+    unnecessary_lambdas: true
+    unnecessary_null_aware_operator_on_extension_on_nullable: true
+    unnecessary_null_checks: true
+    unnecessary_parenthesis: true
+    unnecessary_raw_strings: true
+    unnecessary_to_list_in_spreads: true
+    use_colored_box: true
+    use_decorated_box: true
+    use_if_null_to_convert_nulls_to_bools: true
+    use_is_even_rather_than_modulo: true
+    use_late_for_private_fields_and_variables: true
+    use_named_constants: true
+    use_raw_strings: true
+    use_setters_to_change_properties: true
+    use_string_buffers: true
+    use_super_parameters: true
+    use_test_throws_matchers: true
+    use_to_and_as_if_applicable: true
+    secure_pubspec_urls: true
+    sort_pub_dependencies: true
