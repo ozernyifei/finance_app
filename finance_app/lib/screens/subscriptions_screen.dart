@@ -32,14 +32,19 @@ class SubscriptionsScreen extends StatelessWidget {
         ],
       ),
       body: subscriptionProvider.subscriptions.isEmpty
-          ? const Center(child: Text('No subscriptions added.'))
-          : ListView.builder(
-              itemCount: subscriptionProvider.subscriptions.length,
-              itemBuilder: (context, index) {
-                final subscription = subscriptionProvider.subscriptions[index];
-                return SubscriptionItem(subscription: subscription);
+      ? const Center(child: Text('No subscriptions added.'))
+      : ListView.builder(
+          itemCount: subscriptionProvider.subscriptions.length,
+          itemBuilder: (context, index) {
+            final subscription = subscriptionProvider.subscriptions[index];
+            return SubscriptionItem(
+              subscription: subscription,
+                onDelete: () async {
+                await subscriptionProvider.deleteSubscription(subscription.id!); 
               },
-            ),
+            );
+          },
+      ),
     );
   }
 }
