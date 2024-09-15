@@ -1,4 +1,5 @@
 {
+    "@@locale": "ru",
     "login": "Вход",
     "register": "Регистрация",
     "username": "Имя пользователя",
@@ -14,6 +15,10 @@
     "select_date": "Выбрать дату",
     "add": "Добавить",
     "no_expenses": "Расходы не записаны.",
-    "authentication_failed": "Ошибка аутентификации"
+    "authentication_failed": "Ошибка аутентификации",
+    "dont_have_account_register": "Нет аккаунта? Зарегистрируйтесь",
+    "already_have_account_login": "Уже есть аккаунт? Войти",
+    "enter_username": "Введите имя пользователя",
+    "enter_password": "Введите пароль"
   }
   

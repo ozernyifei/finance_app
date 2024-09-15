@@ -1,4 +1,5 @@
 {
+    "@@locale": "en",
     "login": "Login",
     "register": "Register",
     "username": "Username",
@@ -14,6 +15,10 @@
     "select_date": "Select Date",
     "add": "Add",
     "no_expenses": "No expenses recorded.",
-    "authentication_failed": "Authentication Failed"
+    "authentication_failed": "Authentication Failed",
+    "dont_have_account_register": "Don't have an account? Register",
+    "already_have_account_login": "Already have an account? Login",
+    "enter_username": "Enter username",
+    "enter_password": "Enter password"
   }
   
